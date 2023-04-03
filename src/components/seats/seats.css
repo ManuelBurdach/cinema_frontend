@@ -1,0 +1,56 @@
+.SeatsParent {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.SeatsParent > * {
+  margin: 20px;
+}
+
+.SeatsParent > div:first-child > div {
+  display: flex;
+  align-items: center;
+}
+
+.Seats {
+  height: 300px;
+  width: 300px;
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstclass {
+  margin: 13px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+  cursor: pointer;
+}
+
+.woodclass {
+  margin: 13px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.occupies {
+  margin: 13px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.canvas {
+  width: 300px;
+  height: 10px;
+  background-color: red;
+}
