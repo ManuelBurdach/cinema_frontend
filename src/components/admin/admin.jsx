@@ -12,14 +12,14 @@ const Admin = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:7777/api/v1/cinema")
+    fetch(`${import.meta.env.VITE_BASELINK}/api/v1/cinema`)
       .then((res) => res.json())
       .then((data) => setCinemaData(data[1]))
       .catch((err) => console.log(err));
   }, []);
 
   const reset = () => {
-    fetch(`http://localhost:7777/api/v1/reset`, {
+    fetch(`${import.meta.env.VITE_BASELINK}/api/v1/reset`, {
       method: "PUT",
     })
       .then((res) => res.json())
