@@ -5,14 +5,14 @@ const Seats = () => {
   const [cinemaData, setCinemaData] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:7777/api/v1/cinema")
+    fetch(`${import.meta.env.VITE_BASELINK}/api/v1/cinema`)
       .then((res) => res.json())
       .then((data) => setCinemaData(data[1].seats))
       .catch((err) => console.log(err));
   }, []);
 
   const book = (seatNum) => {
-    fetch(`http://localhost:7777/api/v1/cinema/${seatNum}`, {
+    fetch(`${import.meta.env.VITE_BASELINK}/api/v1/cinema/${seatNum}`, {
       method: "PUT",
     })
       .then((res) => res.json())
